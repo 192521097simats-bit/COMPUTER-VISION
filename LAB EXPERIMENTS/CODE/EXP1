@@ -1,0 +1,25 @@
+import cv2
+
+# Read the image
+image = cv2.imread("img1.jpg")
+
+# Check if image is loaded
+if image is None:
+    print("Image not found!")
+else:
+    print("Image read successfully")
+
+    # Convert image to grayscale
+    gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
+
+    # Display original image
+    cv2.imshow("Original Image", image)
+
+    # Display grayscale image
+    cv2.imshow("Grayscale Image", gray)
+
+    # Wait until a key is pressed
+    cv2.waitKey(0)
+
+    # Close all windows
+    cv2.destroyAllWindows()
